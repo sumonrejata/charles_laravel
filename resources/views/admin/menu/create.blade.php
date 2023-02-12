@@ -21,6 +21,15 @@
                             </span>
                           @enderror
                         </div>
+                        <div class="form-group col-sm-12">
+                          <label for="email">Menu Url :</label>
+                          <input type="text" name="url" class="form-control @error('url') is-invalid @enderror">
+                          @error('url')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                          @enderror
+                        </div>
                         
                       </div>
                       <br>

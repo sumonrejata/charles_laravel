@@ -21,6 +21,7 @@ use Database\Seeders\TagSeeder;
 use Database\Seeders\MenuHeaderSeeder;
 use Database\Seeders\PortfolioSeeder;
 use Database\Seeders\HeaderIconSeeder;
+use Database\Seeders\FooterMenuSeeder;
 use Database\Seeders\factory;
 
 class DatabaseSeeder extends Seeder
@@ -55,6 +56,7 @@ class DatabaseSeeder extends Seeder
             MenuHeaderSeeder::class,
             PortfolioSeeder::class,
             HeaderIconSeeder::class,
+            FooterMenuSeeder::class,
         ]);
         
     }

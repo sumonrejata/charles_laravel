@@ -133,13 +133,27 @@
               <li class="nav-item">
                 <a href="{{ route('headericon.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add New Icon</p>
+                  <p>Add Social Icon</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('headericon.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>All Icon</p>
+                  <p>All Social Icon</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('footermenu.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Footer Menu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('footermenu.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Footer Menu</p>
                 </a>
               </li>
             </ul>

@@ -29,24 +29,24 @@ class OurTeamSeeder extends Seeder
             'desig' =>'Hardware',
             'desc' =>'The government they survive as soldiers of fortune',
             'image' =>'images/team/2.jpg',
-            'social_icon' =>'facebook',
-            'social_link' =>'https://www.facebook.com',
+            'social_icon' =>'twitter',
+            'social_link' =>'https://www.twitter.com',
            ],
            [
             'name' =>'Md.Simul',
             'desig' =>'Hardware',
             'desc' =>'The government they survive as soldiers of fortune',
             'image' =>'images/team/3.jpg',
-            'social_icon' =>'facebook',
-            'social_link' =>'https://www.facebook.com',
+            'social_icon' =>'pinterest',
+            'social_link' =>'https://www.pinterest.com',
            ],
            [
             'name' =>'Liton khan',
             'desig' =>'Networking',
             'desc' =>'The government they survive as soldiers of fortune',
             'image' =>'images/team/4.jpg',
-            'social_icon' =>'facebook',
-            'social_link' =>'https://www.facebook.com',
+            'social_icon' =>'youtube',
+            'social_link' =>'https://www.youtube.com',
            ]
  
         ]);

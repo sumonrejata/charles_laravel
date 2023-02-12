@@ -16,6 +16,7 @@ class CreateMenuHeadersTable extends Migration
         Schema::create('menu_headers', function (Blueprint $table) {
             $table->id();
             $table->string('menu_title')->nullable();
+            $table->string('menu_url')->nullable();
             $table->timestamps();
         });
     }

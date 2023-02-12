@@ -21,6 +21,9 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\HeaderIconController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\FooterMenuController;
+
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -184,6 +187,17 @@ Route::get('contact/create',[ContactUsController::class,'create'])->name('contac
 Route::post('contact/store',[ContactUsController::class,'store'])->name('contact.store');
 Route::get('contact/index',[ContactUsController::class,'index'])->name('contact.index');
 
+//________ Footer Menu Route ___________//
+Route::get('footermenu/create',[FooterMenuController::class,'create'])->name('footermenu.create');
+Route::post('footermenu/store',[FooterMenuController::class,'store'])->name('footermenu.store');
+Route::get('footermenu/index',[FooterMenuController::class,'index'])->name('footermenu.index');
+
+
+//_______ Frontend Route  _________//
+Route::get('website/test',[FrontendController::class,'index'])->name('website.index');
+Route::get('website/mainhome',[FrontendController::class,'mainhome'])->name('website.mainhome');
+Route::get('website/blogtff',[FrontendController::class,'blogt'])->name('website.blogt');
+Route::get('website/footer',[FrontendController::class,'footer'])->name('website.footer');
 
 
 
