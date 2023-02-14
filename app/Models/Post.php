@@ -16,8 +16,12 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    // public function Category(){
+    //     return $this->belongsTo(Category::class,'category_id');
+    // }
+
     public function Category(){
-        return $this->belongsTo(Category::class,'category_id');
+        return $this->belongsTo(Category::class);
     }
 
     public function user(){

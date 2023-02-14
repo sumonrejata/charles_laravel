@@ -24,9 +24,7 @@
 
 						<div class="col-xl-9 col-lg-8 col-12 our-blog">
 							<div class="post-wrapper">
-								@foreach ($post as $row)
-									
-								
+								@foreach ($post as $row)							
 								<div class="single-blog">
 									<div class="image-box">
 										<img src="{{ asset($row->image) }}" alt="">
@@ -35,7 +33,7 @@
 									<div class="post-meta">
 										<h5 class="title"><a href="blog-details.html">{{ $row->title }}</a></h5>
 										<p>{{ $row->desc }}</p>
-										<a href="blog-details.html" class="read-more">READ MORE</a>
+										<a href="{{ route('website.blogdetails', $row->id) }}" class="read-more">READ MORE</a>
 									</div> <!-- /.post-meta -->
 								</div> <!-- /.single-blog -->
 								@endforeach

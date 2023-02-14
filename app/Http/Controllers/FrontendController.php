@@ -97,6 +97,21 @@ class FrontendController extends Controller
     return view('frontend.index',compact('services','logo','head_address','featurs','about','about_sub','testimonial','our_team','counter','OurPartners','slider','menu','footer_menu','recent_post'));
   }
 
+  //__________ Blog Details __________//
+  public function Blogdetails($id)
+  {
+    $logo = HeaderLogo::all();
+    $head_address = HeaderAddress::all();
+    $menu = MenuHeader::all();
+    $footer_menu = FooterMenu::all();
+    $recent_post = Post::latest()->take(2)->get();
+    //$related_post = Category::with('posts')->get();
+    $related_post = Post::where('category_id',"!=",$id)->get();
+    return $related_post;
+    
+    return view('frontend.blogdetails',compact('logo','head_address','menu','footer_menu','recent_post','related_post'));
+  }
+
 
 
 

@@ -199,6 +199,9 @@ Route::get('website/mainhome',[FrontendController::class,'mainhome'])->name('web
 Route::get('website/blogtff',[FrontendController::class,'blogt'])->name('website.blogt');
 Route::get('website/footer',[FrontendController::class,'footer'])->name('website.footer');
 
+//_______ Frontend Related Post Route  _________//
+Route::get('website/blogdetails/{id}',[FrontendController::class,'Blogdetails'])->name('website.blogdetails');
+
 
 
 
