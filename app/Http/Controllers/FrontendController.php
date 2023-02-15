@@ -40,9 +40,10 @@ class FrontendController extends Controller
     $slider = Slider::all();
     $menu = MenuHeader::all();
     $footer_menu = FooterMenu::all();
+    $recent_post = Post::latest()->take(2)->get();
 
 
-    return view('frontend.index',compact('services','logo','head_address','featurs','about','about_sub','testimonial','our_team','counter','OurPartners','slider','menu','footer_menu'));
+    return view('frontend.index',compact('services','logo','head_address','featurs','about','about_sub','testimonial','our_team','counter','OurPartners','slider','menu','footer_menu','recent_post'));
   } 
   
   //_______ Blog section Start __________//
@@ -51,7 +52,7 @@ class FrontendController extends Controller
     $head_address = HeaderAddress::all();
     $menu = MenuHeader::all();
     //$post = Post::latest()->take(2)->get();
-    $post = DB::table('posts')->simplePaginate(2);
+    $post = DB::table('posts')->simplePaginate(4);
     $recent_post = Post::latest()->take(2)->get();
     $category = Category::all();
     $tags = Tag::all();
@@ -92,6 +93,7 @@ class FrontendController extends Controller
     $menu = MenuHeader::all();
     $footer_menu = FooterMenu::all();
     $recent_post = Post::latest()->take(2)->get();
+    return $recent_post;
 
 
     return view('frontend.index',compact('services','logo','head_address','featurs','about','about_sub','testimonial','our_team','counter','OurPartners','slider','menu','footer_menu','recent_post'));
@@ -106,10 +108,23 @@ class FrontendController extends Controller
     $footer_menu = FooterMenu::all();
     $recent_post = Post::latest()->take(2)->get();
     //$related_post = Category::with('posts')->get();
-    $related_post = Post::where('category_id',"!=",$id)->get();
-    return $related_post;
+    //$related_post = Post::where('category_id',"!=",$post->id)->get();
+    // $category = $post->Category;
+    // $related = $category->posts()->where('id','!=',$post->id)->get();
+    // $post = Post::with('Category')->get();
+    // $category = Category::all();
+    // return $category;
+    // $cat_id = $post->category_id;
     
-    return view('frontend.blogdetails',compact('logo','head_address','menu','footer_menu','recent_post','related_post'));
+    // $related = Post::where('category_id',$cat_id)->get();
+    $show_blog_post = Post::findOrFail($id);
+
+    $related_posts = Post::with('category')->where('category_id', '=', 
+    $show_blog_post->category_id)->get();
+    //return $show_blog_post;
+    
+    
+    return view('frontend.blogdetails',compact('logo','head_address','menu','footer_menu','recent_post','related_posts'));
   }
 
 

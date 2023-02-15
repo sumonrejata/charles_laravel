@@ -28,7 +28,7 @@
 								<div class="single-blog">
 									<div class="image-box">
 										<img src="{{ asset($row->image) }}" alt="">
-										<div class="overlay"><a href="#" class="date">Feb 06, 2018</a></div>
+										<div class="overlay"><a href="#" class="date">Feb 06, 2018-- {{ $row->format('d/m/Y') }}</a></div>
 									</div> <!-- /.image-box -->
 									<div class="post-meta">
 										<h5 class="title"><a href="blog-details.html">{{ $row->title }}</a></h5>

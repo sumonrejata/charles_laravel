@@ -20,7 +20,7 @@
 									<li class="clearfix">
 										<img src="{{ asset($latest->image) }}" alt="" class="float-left">
 										<div class="post float-left">
-											<a href="blog-details.html">{{ $latest->title }}</a>
+											<a href="{{ route('website.blogdetails', $row->id) }}">{{ $latest->title }}</a>
 											<div class="date"><i class="fa fa-calendar-o" aria-hidden="true"></i>{{ $latest->created_at->format('d M Y') }}</div>
 										</div>
 									</li>

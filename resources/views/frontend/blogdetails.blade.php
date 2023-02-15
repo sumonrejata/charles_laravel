@@ -72,7 +72,7 @@
 								</div> <!-- /.theme-title-one -->
 								<div class="row">
 									<div class="related-post-slider">
-                                        @foreach ($related_post as $row)
+                                        @foreach ($related_posts as $row)
                                             
 										<div class="item">
 											<div class="single-blog">
